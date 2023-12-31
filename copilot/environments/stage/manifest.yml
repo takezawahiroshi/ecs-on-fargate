@@ -1,0 +1,30 @@
+# The manifest for the "stage" environment.
+# Read the full specification for the "Environment" type at:
+#  https://aws.github.io/copilot-cli/docs/manifest/environment/
+
+# Your environment name will be used in naming your resources like VPC, cluster, etc.
+name: stage
+type: Environment
+
+# Import your own VPC and subnets or configure how they should be created.
+network:
+  vpc:
+    id: vpc-0cdd04ce277f6ffe3
+    subnets:
+      public:
+        - id: subnet-03fdfe13105e3f793
+        - id: subnet-03dcfe03f5fb137a5
+        - id: subnet-08e16e35f9af5ba32
+      private:
+        - id: subnet-0b8aaa3180660e727
+        - id: subnet-05b6f362e2c373c51
+        - id: subnet-07a85a0fa6b401abf
+
+# Configure the load balancers in your environment, once created.
+# http:
+#   public:
+#   private:
+
+# Configure observability for your environment resources.
+observability:
+  container_insights: false

@@ -1,0 +1,171 @@
+{
+    "tasks": [
+        {
+            "attachments": [
+                {
+                    "id": "13c17fb0-d9de-4f7d-8511-cc778c504f38",
+                    "type": "ElasticNetworkInterface",
+                    "status": "ATTACHED",
+                    "details": [
+                        {
+                            "name": "subnetId",
+                            "value": "subnet-03fdfe13105e3f793"
+                        },
+                        {
+                            "name": "networkInterfaceId",
+                            "value": "eni-09ddd2185c4642989"
+                        },
+                        {
+                            "name": "macAddress",
+                            "value": "0e:12:0d:12:1b:31"
+                        },
+                        {
+                            "name": "privateDnsName",
+                            "value": "ip-10-0-47-201.ap-northeast-1.compute.internal"
+                        },
+                        {
+                            "name": "privateIPv4Address",
+                            "value": "10.0.47.201"
+                        }
+                    ]
+                },
+                {
+                    "id": "43719dfb-0dd3-40de-a3e5-4cebfa103640",
+                    "type": "ServiceConnect",
+                    "status": "ATTACHED",
+                    "details": [
+                        {
+                            "name": "ContainerName",
+                            "value": "ecs-service-connect-nMfHo8"
+                        }
+                    ]
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "ecs.cpu-architecture",
+                    "value": "x86_64"
+                }
+            ],
+            "availabilityZone": "ap-northeast-1d",
+            "clusterArn": "arn:aws:ecs:ap-northeast-1:020306416435:cluster/ecs-training-container-stage-Cluster-NbCrZxfVhIdl",
+            "connectivity": "CONNECTED",
+            "connectivityAt": "2023-12-30T13:39:33.865000+00:00",
+            "containers": [
+                {
+                    "containerArn": "arn:aws:ecs:ap-northeast-1:020306416435:container/ecs-training-container-stage-Cluster-NbCrZxfVhIdl/8cfaa600831242f68811c26fba09497a/01fc09e2-c7e4-4847-a80a-d7463b4fc3b1",
+                    "taskArn": "arn:aws:ecs:ap-northeast-1:020306416435:task/ecs-training-container-stage-Cluster-NbCrZxfVhIdl/8cfaa600831242f68811c26fba09497a",
+                    "name": "service-backend",
+                    "image": "020306416435.dkr.ecr.ap-northeast-1.amazonaws.com/ecs-training-container/service-backend@sha256:57ce89e0e6a7bc00506b458d4d1c64854d08490a2ac4a77ce2eef06235f53bf7",
+                    "imageDigest": "sha256:57ce89e0e6a7bc00506b458d4d1c64854d08490a2ac4a77ce2eef06235f53bf7",
+                    "runtimeId": "8cfaa600831242f68811c26fba09497a-2477552985",
+                    "lastStatus": "RUNNING",
+                    "networkBindings": [],
+                    "networkInterfaces": [
+                        {
+                            "attachmentId": "13c17fb0-d9de-4f7d-8511-cc778c504f38",
+                            "privateIpv4Address": "10.0.47.201"
+                        }
+                    ],
+                    "healthStatus": "UNKNOWN",
+                    "managedAgents": [
+                        {
+                            "lastStartedAt": "2023-12-30T13:40:19.630000+00:00",
+                            "name": "ExecuteCommandAgent",
+                            "lastStatus": "RUNNING"
+                        }
+                    ],
+                    "cpu": "0"
+                },
+                {
+                    "containerArn": "arn:aws:ecs:ap-northeast-1:020306416435:container/ecs-training-container-stage-Cluster-NbCrZxfVhIdl/8cfaa600831242f68811c26fba09497a/5c99b0b8-05f9-4c0e-bd84-a9ed2fd0149e",
+                    "taskArn": "arn:aws:ecs:ap-northeast-1:020306416435:task/ecs-training-container-stage-Cluster-NbCrZxfVhIdl/8cfaa600831242f68811c26fba09497a",
+                    "name": "ecs-service-connect-nMfHo8",
+                    "lastStatus": "RUNNING",
+                    "networkInterfaces": [
+                        {
+                            "attachmentId": "13c17fb0-d9de-4f7d-8511-cc778c504f38",
+                            "privateIpv4Address": "10.0.47.201"
+                        }
+                    ],
+                    "healthStatus": "HEALTHY",
+                    "managedAgents": [
+                        {
+                            "lastStartedAt": "2023-12-30T13:39:57.289000+00:00",
+                            "name": "ExecuteCommandAgent",
+                            "lastStatus": "RUNNING"
+                        }
+                    ]
+                }
+            ],
+            "cpu": "256",
+            "createdAt": "2023-12-30T13:39:29.649000+00:00",
+            "desiredStatus": "RUNNING",
+            "enableExecuteCommand": true,
+            "group": "service:ecs-training-container-stage-service-backend-Service-me1TcDQFJMda",
+            "healthStatus": "HEALTHY",
+            "lastStatus": "RUNNING",
+            "launchType": "FARGATE",
+            "memory": "512",
+            "overrides": {
+                "containerOverrides": [
+                    {
+                        "name": "ecs-service-connect-nMfHo8",
+                        "environment": [
+                            {
+                                "name": "ENVOY_CONCURRENCY",
+                                "value": "2"
+                            },
+                            {
+                                "name": "ENVOY_ADMIN_MODE",
+                                "value": "UDS"
+                            },
+                            {
+                                "name": "ENABLE_STATS_SNAPSHOT",
+                                "value": "true"
+                            },
+                            {
+                                "name": "APPMESH_METRIC_EXTENSION_VERSION",
+                                "value": "1"
+                            },
+                            {
+                                "name": "APPNET_ENVOY_RESTART_COUNT",
+                                "value": "3"
+                            },
+                            {
+                                "name": "HC_DISCONNECTED_TIMEOUT_S",
+                                "value": "10800"
+                            },
+                            {
+                                "name": "APPNET_AGENT_ADMIN_MODE",
+                                "value": "UDS"
+                            },
+                            {
+                                "name": "APPMESH_RESOURCE_ARN",
+                                "value": "arn:aws:ecs:ap-northeast-1:020306416435:task-set/ecs-training-container-stage-Cluster-NbCrZxfVhIdl/ecs-training-container-stage-service-backend-Service-me1TcDQFJMda/ecs-svc/0431259224476158996"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "service-backend"
+                    }
+                ],
+                "inferenceAcceleratorOverrides": []
+            },
+            "platformVersion": "1.4.0",
+            "platformFamily": "Linux",
+            "pullStartedAt": "2023-12-30T13:39:42.496000+00:00",
+            "pullStoppedAt": "2023-12-30T13:39:48.011000+00:00",
+            "startedAt": "2023-12-30T13:40:39.061000+00:00",
+            "startedBy": "ecs-svc/0431259224476158996",
+            "tags": [],
+            "taskArn": "arn:aws:ecs:ap-northeast-1:020306416435:task/ecs-training-container-stage-Cluster-NbCrZxfVhIdl/8cfaa600831242f68811c26fba09497a",
+            "taskDefinitionArn": "arn:aws:ecs:ap-northeast-1:020306416435:task-definition/ecs-training-container-stage-service-backend:2",
+            "version": 4,
+            "ephemeralStorage": {
+                "sizeInGiB": 20
+            }
+        }
+    ],
+    "failures": []
+}
