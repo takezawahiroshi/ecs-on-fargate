@@ -40,7 +40,7 @@ env:
   FRONTEND_TASK_DEFINITION: myapp/frontend/task-definition-frontend.json
   BACKEND_TASK_DEFINITION: myapp/backend/task-definition-backend.json
   FRONTEND_CONTAINER_NAME: myservice
-  BACKEND_CONTAINER_NAME:　service-backend
+  BACKEND_CONTAINER_NAME: service-backend
 
 permissions:
   contents: read
