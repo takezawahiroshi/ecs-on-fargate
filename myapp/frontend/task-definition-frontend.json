@@ -1,0 +1,115 @@
+{
+    "taskDefinition": {
+        "taskDefinitionArn": "arn:aws:ecs:ap-northeast-1:020306416435:task-definition/ecs-training-container-stage-myservice:6",
+        "containerDefinitions": [
+            {
+                "name": "myservice",
+                "image": "020306416435.dkr.ecr.ap-northeast-1.amazonaws.com/ecs-training-container/myservice:d0d423ad-d584-4c1e-be4a-53963513b12a-stage",
+                "cpu": 0,
+                "links": [],
+                "portMappings": [
+                    {
+                        "containerPort": 3000,
+                        "hostPort": 3000,
+                        "protocol": "tcp",
+                        "name": "target"
+                    }
+                ],
+                "essential": true,
+                "entryPoint": [],
+                "command": [],
+                "environment": [
+                    {
+                        "name": "COPILOT_SERVICE_DISCOVERY_ENDPOINT",
+                        "value": "stage.ecs-training-container.local"
+                    },
+                    {
+                        "name": "COPILOT_LB_DNS",
+                        "value": "ecs-tr-Publi-iRLKfGIpB2lf-279738078.ap-northeast-1.elb.amazonaws.com"
+                    },
+                    {
+                        "name": "COPILOT_APPLICATION_NAME",
+                        "value": "ecs-training-container"
+                    },
+                    {
+                        "name": "COPILOT_SERVICE_NAME",
+                        "value": "myservice"
+                    },
+                    {
+                        "name": "COPILOT_ENVIRONMENT_NAME",
+                        "value": "stage"
+                    }
+                ],
+                "environmentFiles": [],
+                "mountPoints": [],
+                "volumesFrom": [],
+                "secrets": [],
+                "dnsServers": [],
+                "dnsSearchDomains": [],
+                "extraHosts": [],
+                "dockerSecurityOptions": [],
+                "dockerLabels": {},
+                "ulimits": [],
+                "logConfiguration": {
+                    "logDriver": "awslogs",
+                    "options": {
+                        "awslogs-group": "/copilot/ecs-training-container-stage-myservice",
+                        "awslogs-region": "ap-northeast-1",
+                        "awslogs-stream-prefix": "copilot"
+                    },
+                    "secretOptions": []
+                },
+                "systemControls": []
+            }
+        ],
+        "family": "ecs-training-container-stage-myservice",
+        "taskRoleArn": "arn:aws:iam::020306416435:role/ecs-training-container-stage-myservice-TaskRole-jSMpcznwGZaM",
+        "executionRoleArn": "arn:aws:iam::020306416435:role/ecs-training-container-stage-myservic-ExecutionRole-Y6rQ2a2ccHMt",
+        "networkMode": "awsvpc",
+        "revision": 6,
+        "volumes": [],
+        "status": "ACTIVE",
+        "requiresAttributes": [
+            {
+                "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+            },
+            {
+                "name": "ecs.capability.execution-role-awslogs"
+            },
+            {
+                "name": "com.amazonaws.ecs.capability.ecr-auth"
+            },
+            {
+                "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+            },
+            {
+                "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+            },
+            {
+                "name": "com.amazonaws.ecs.capability.task-iam-role"
+            },
+            {
+                "name": "ecs.capability.execution-role-ecr-pull"
+            },
+            {
+                "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+            },
+            {
+                "name": "ecs.capability.task-eni"
+            }
+        ],
+        "placementConstraints": [],
+        "compatibilities": [
+            "EC2",
+            "FARGATE"
+        ],
+        "requiresCompatibilities": [
+            "FARGATE"
+        ],
+        "cpu": "256",
+        "memory": "512",
+        "registeredAt": "2024-01-01T02:19:45.138000+00:00",
+        "registeredBy": "arn:aws:sts::020306416435:assumed-role/ecs-training-container-stage-CFNExecutionRole/AWSCloudFormation"
+    },
+    "tags": []
+}
