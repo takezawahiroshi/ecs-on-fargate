@@ -7,7 +7,7 @@ import RefreshBtn from './components/refresh-btn'
 export default function Page() {
   return (
     <main>
-      <p>test16:39</p>
+      <p>test16:57</p>
       <div className="m-10 text-center">
         <Suspense fallback={<Spinner color="border-green-500" />}>
           <NotesList />
