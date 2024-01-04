@@ -8,7 +8,6 @@ export default function Page() {
   return (
     <main>
       <div className="m-10 text-center">
-        <p>Hello World</p>
         <Suspense fallback={<Spinner color="border-green-500" />}>
           <NotesList />
         </Suspense>
